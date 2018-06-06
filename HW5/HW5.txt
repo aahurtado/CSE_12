@@ -1,0 +1,221 @@
+CSE 12 Homework 5
+Aaron Hurtado
+A99128987
+B00
+5/5/14
+
+
+I.
+
+I. Bubble
+A. For Bubble Sort I first used the default parameters. I then found the
+default to be good enough for me to gain the necessary insight on the running
+time of the algorithm.
+B. 
+Document: random-strings.txt
+ sortAlg: 0
+=======================================
+  1:    5000 words in     674 milliseconds
+  2:   10000 words in    3402 milliseconds
+  3:   15000 words in    8570 milliseconds
+  4:   20000 words in   19548 milliseconds
+  5:   25000 words in   29416 milliseconds
+C. The apparent time complexity for bubble sort I would say is O(n^2). The
+data points I used were from 5,000 to 10,000 words (which had about a 4x increase)
+and from 10,000 to 20,000 (which also had about a 4-5x increase). Based on
+these increases I came to the conclusion that bubble sort increases
+quadradically and so must be O(n^2).
+
+
+II. Insertion
+A. For insertion sort I tested many parameters until I found one that
+gave me enough insight into the time complexity of the algorithm. I used a
+start and increment of 20,000 in order to gain the necessary insight.
+B. 
+Document: random-strings.txt
+ sortAlg: 1
+=======================================
+  1:   20000 words in      72 milliseconds
+  2:   40000 words in     279 milliseconds
+  3:   60000 words in     533 milliseconds
+  4:   80000 words in    1035 milliseconds
+  5:  100000 words in    1464 milliseconds
+C. The apparent time complexity for Insertion Sort is O(n^2). The
+data points I used were from 5,000 to 10,000 and from 10,000 to 20,000 (they
+both had about a 4x increase). Based on the output data I can say that
+insertion sort increases quadradically and thus is O(n^2).
+
+
+III. Merge
+A. For merge sort the default parameters did not give enough information,
+however when i tried putting 10,000 for the start and increment arguments I
+found it enough to find out the time complexity.
+B.
+Document: random-strings.txt
+ sortAlg: 2
+=======================================
+  1:   10000 words in     279 milliseconds
+  2:   20000 words in    1537 milliseconds
+  3:   30000 words in    4018 milliseconds
+  4:   40000 words in    7513 milliseconds
+  5:   50000 words in   12392 milliseconds
+C. Based on my data time output I found the time complexity of merge sort to
+be about O(n log(n)). From 10,000 to 20,000 words there is a 5.5 times
+increase while from 20,000 to 40,000 words there is a 4.8 times increase. Thus
+I saw that the time complexity is increasing at a decreasing rate. Therefore I
+ruled out n^2 and it wasn't fast enough to be just log(n) so I concluded that
+this algorithm has O(n log(n)). 
+
+
+IV. Quick
+A. For quick sort I also had to try out many different parameters in order to
+find one that gave me a clear output of its time complexity. I started off
+with the default and kept incrementing the start and increment parameters
+until I settled on using 30,000 for both of them.
+B. 
+sortAlg: 3
+=======================================
+  1:   30000 words in      49 milliseconds
+  2:   60000 words in     106 milliseconds
+  3:   90000 words in     179 milliseconds
+  4:  120000 words in     283 milliseconds
+  5:  150000 words in     287 milliseconds
+C. The apparent time complexity for quick sort is O(n^2). The
+data points I used were from 5,000 to 10,000 and from 10,000 to 20,000 (they
+both had about a 3x increase). Although quick sort did not increase as fast as
+bubble and insert sort, I believe quick sort also has a time complexity of
+O(n^2).
+
+
+
+
+II.
+
+I. Bubble
+A. For bubble sort when I did the default parameters the times were too quick
+to gain any insight. Thus I gradually increased the start and increment
+parameters until I was able to tell what the time complexity was. I ended up
+having to use 30,000 for both start and increment to see what the time
+complexity was.
+B. 
+Document: random-strings-sorted.txt
+ sortAlg: 0
+=======================================
+  1:   30000 words in       8 milliseconds
+  2:   60000 words in      10 milliseconds
+  3:   90000 words in      16 milliseconds
+  4:  120000 words in      19 milliseconds
+  5:  150000 words in      21 milliseconds
+C. The time complexity I came up with based on my data output is that bubble
+sort is O(n) on a sorted data input. I noticed based on my data that has n
+increases so does the time the algorithm takes. However the time increase was
+not as fast as bubble sort was on the unsorted data text file. Looking at my
+data I concluded that bubble sort's time complexity increases linearly and
+thus I decided on O(n).
+
+
+II. Insertion
+A. With insertion sort I also had to experiment with the start and increment
+parameters until I found a value that gave me good enough output data to find
+insight on the time complexity of this algorithm. I found using 30,000 for
+both start and increment good enough to find a pattern in the output times. 
+B. 
+Document: random-strings-sorted.txt
+ sortAlg: 1
+=======================================
+  1:   30000 words in      12 milliseconds
+  2:   60000 words in      16 milliseconds
+  3:   90000 words in      25 milliseconds
+  4:  120000 words in      30 milliseconds
+  5:  150000 words in      31 milliseconds
+C. Based on my data output times I deduce that insertion sort has a time
+complexity of O(n) on a sorted data input. Looking at my times I can see that
+as n increases the time increases at a linear rate. The rate increase is
+definitely not fast enough to be n^2 but I found O(n) to match well.
+
+
+III. Merge
+A. For merge sort I had to experiment a lot to find the time complexity. To
+help me I decided to increase the number of steps to 8 and lowered the start
+and increment arguments to 500. After doing this I saw the pattern of the time
+complexity. 
+B.
+Document: random-strings-sorted.txt
+ sortAlg: 2
+=======================================
+  1:     500 words in       5 milliseconds
+  2:    1000 words in       6 milliseconds
+  3:    1500 words in      14 milliseconds
+  4:    2000 words in      29 milliseconds
+  5:    2500 words in      42 milliseconds
+  6:    3000 words in      63 milliseconds
+  7:    3500 words in      91 milliseconds
+  8:    4000 words in     132 milliseconds
+C. Based on my data output I concluded that the time complexity for merge sort
+is O(n log(n)). From 1000 words to 2000 words there's a 4.8 times increase and
+from 2000 to 4000 words there's a 4.5 times increase. So I noticed that as n
+increases the time is increasing but not high enough to be n^2 so I deduced it
+must be O(n log(n)).
+
+
+IV. Quick
+A. For quick sort I decided to increase the steps argument to 16 and change
+start and increment to 500. After doing this it was much easier for me to see
+the time complexity. The default parameters did not give enough information
+for me. 
+B.
+Document: random-strings-sorted.txt
+ sortAlg: 3
+=======================================
+  1:     500 words in      14 milliseconds
+  2:    1000 words in      12 milliseconds
+  3:    1500 words in      27 milliseconds
+  4:    2000 words in      50 milliseconds
+  5:    2500 words in      84 milliseconds
+  6:    3000 words in     145 milliseconds
+  7:    3500 words in     227 milliseconds
+  8:    4000 words in     310 milliseconds
+  9:    4500 words in     428 milliseconds
+ 10:    5000 words in     500 milliseconds
+ 11:    5500 words in     686 milliseconds
+ 12:    6000 words in     774 milliseconds
+ 13:    6500 words in    1040 milliseconds
+ 14:    7000 words in     939 milliseconds
+ 15:    7500 words in    1399 milliseconds
+ 16:    8000 words in    1615 milliseconds
+C. Looking at my data output I decided that quick sort's time complexity
+behaves most like O(n log(n)). From 1000 to 2000 words there is a 4.2 times
+increase, from 2000 to 4000 words there is a 6.2 times increase, and from
+4000 to 8000 words there's a 5.2 times increase. Therefore I reasoned that the
+time is increasing but at a decreasing rate so it must be O(n log(n)).
+
+
+
+Part 3:
+1. what does the method binsearch actually do?
+binSearch searches the ArrayList using binary search in order to find where
+the target element should be placed. It first checks if the target is greater
+than the largest element in the ArrayList or smaller than the smallest element in
+the ArrayList, if so then it returns the appropiate location. Otherwise it
+searches in the middle of the ArrayList through classic binary search until
+it finds the right place to insert the target element. binSearch is basically
+used to find where in the sorted part a target element should go.
+
+2. how is it used in the modified insertion sort?
+The modified insertion sort uses binSearch to find the best place to insert
+the target element in the auxiliary ArrayList (aka the sorted ArrayList). The
+modified insertion sort creates an ArrayList the same size as the input list
+then gets one element from the inputed list, uses binSearch to find where to
+place it in the auxiliary ArrayList, then adds it to the location returned by
+binSearch. It then copies the now sorted ArrayList to the original input list.
+
+3. what is the space complexity of classic insertion sort?
+O(1). Insertion sort only requires a constant amount O(1) of additional
+memory space (because of its in-place nature). The input items are taken off
+the list one at a time, and then inserted in the proper place in the sorted list.  
+
+4. what is the space complexity of modified insertion sort?
+O(1). The modified insertion sort is pretty much the same as classic insertion
+sort except that it uses binary search to find correct location to place a
+target element. But space-wise it is the same as it is still an in-place
+sorting algorithm and only sorts one element at a time.

@@ -1,0 +1,112 @@
+CSE 12 Homework 6
+Aaron Hurtado
+A99128987
+B00
+5/9/14
+
+
+Part 2:
+
+
+I. random­strings.txt
+
+I. Heap
+I choose 5000 for both the initial words and increment. My parameters were
+random-strings.txt 4 5000 5000. I found 5000 to be a good enough increment to
+find a pattern in the timings. I did do 8 iterations in order to really see
+the pattern.
+A.
+random-strings.txt 4 5000 5000 8
+Document: random-strings.txt
+ sortAlg: 4
+=======================================
+  1:    5000 words in     116 milliseconds
+  2:   10000 words in     399 milliseconds
+  3:   15000 words in     893 milliseconds
+  4:   20000 words in    1686 milliseconds
+  5:   25000 words in    2629 milliseconds
+  6:   30000 words in    3749 milliseconds
+  7:   35000 words in    4921 milliseconds
+  8:   40000 words in    6522 milliseconds
+B. The apparent time complexity for heap sort is O(n log(n)). From 5000 to
+10000 the time increased by about 3.4. Then from 10,000 to 20,000 it increased
+by about 4.2. Then lastly from 20,000 to 40,000 it increased by 3.8. Also from
+5000 to 20000 it increased by 14. This most resembles O(n log (n)) and makes
+sense based on how the height of a complete binary tree is at most log(n + 1).
+Additionally copying each element from the unsorted list is order n. Together
+Heapsort ends up with O(n log(n)).
+
+
+II. Insertion
+For insertion sort I tested many parameters until I found one that
+gave me enough insight into the time complexity of the algorithm. I used a
+start and increment of 20,000 in order to gain the necessary information.
+A. 
+Document: random-strings.txt
+ sortAlg: 1
+=======================================
+  1:   20000 words in      72 milliseconds
+  2:   40000 words in     279 milliseconds
+  3:   60000 words in     533 milliseconds
+  4:   80000 words in    1035 milliseconds
+  5:  100000 words in    1464 milliseconds
+B. The apparent time complexity for Insertion Sort is O(n^2). The
+data points I used were from 5,000 to 10,000 and from 10,000 to 20,000 (they
+both had about a 4x increase). Based on the output data I can say that
+insertion sort increases quadradically and thus is O(n^2).
+
+
+
+II. random­strings­sorted.txt
+
+I. Heap
+I choose random-strings.txt 4 5000 5000 8 as my parameters. This was the same
+paramaters I used for the unsorted list and again I found them good enough to
+find the time complexity.
+A.
+Document: random-strings-sorted.txt
+ sortAlg: 4
+=======================================
+  1:    5000 words in     119 milliseconds
+  2:   10000 words in     427 milliseconds
+  3:   15000 words in     952 milliseconds
+  4:   20000 words in    1659 milliseconds
+  5:   25000 words in    2620 milliseconds
+  6:   30000 words in    3780 milliseconds
+  7:   35000 words in    5014 milliseconds
+  8:   40000 words in    6632 milliseconds
+B. The apparent time complexity for heap sort on the sorted list is O(n log(n)).
+Just by simply comparing the timings on the sorted and unsorted list they are
+nearly identical. Thus I concluded the big O must be the same and be
+O(n log(n)).
+
+
+II. Insertion
+With insertion sort I also had to experiment with the start and increment
+parameters until I found a value that gave me good enough output data to find
+insight on the time complexity of this algorithm. I found using 30,000 for
+both start and increment good enough to find a pattern in the output times. 
+A. 
+Document: random-strings-sorted.txt
+ sortAlg: 1
+=======================================
+  1:   30000 words in      12 milliseconds
+  2:   60000 words in      16 milliseconds
+  3:   90000 words in      25 milliseconds
+  4:  120000 words in      30 milliseconds
+  5:  150000 words in      31 milliseconds
+B. Based on my data output times I deduce that insertion sort has a time
+complexity of O(n) on a sorted data input. Looking at my times I can see that
+as n increases the time increases at a linear rate. The rate increase is
+definitely not fast enough to be n^2 but I found O(n) to match well.
+
+
+
+III. Compare
+Insertion sort is faster on a sorted list because it has O(n) compared to
+Heap sorts O(n log(n)). This is because insertion sort when it checks if an
+element is in the right place is an O(1) operation that occurs n times. On the
+other hand heap sort still has to do n operations to copy the list and sort
+it. However, on an unsorted list heap sort is definitely better because it is
+still O(n log(n)) while insertion sort becomes O(n^2) which is a big
+difference.

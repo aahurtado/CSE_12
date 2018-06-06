@@ -1,0 +1,5 @@
+This is line 5 (and should be line 1 when reversed)
+	Line 4 is indented, and has some punctuation!
+
+Line 2 is followed by a blank line
+This is the first line

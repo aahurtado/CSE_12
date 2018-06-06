@@ -1,0 +1,32 @@
+NAME: Aaron Hurtado
+ID: A99128987
+LOGIN: cs12scz
+
+
+Part 3a:
+1. public void exposeCells( int row, int col ) is called. 
+	
+2. public class MineSweeperGUI and class MineCell are the two classes.
+MineSweeperGUI sets up the GUI of the game, The MineCell class provides the
+state of the MineCell objects in the game grid and keeps track of details like
+if a MineCell object's neighbords have been visited or been mined.
+
+3. The MineCell class implements MouseListener and and the appropiate
+MouseListener methods that are attached to each MineCell object.
+
+4. The exposeSlowly method sets of a chain of exposes that are delayed in
+milliseconds by the MineSweeperGUI instance variable DELAY. If you want to
+change the animation speed change the DELAY instance variable.
+
+5. The actionPerformed method dequeues MineCell objects from the toExpose
+queue and exposes them. Also checks for a win.
+
+
+Part3c:
+When you play the game using breadth-first search you see the cells becoming
+visible layer by layer. First the closest layer will unravel then the next
+outer layer will unravel untill it done. When you play the game using
+depth-first search you see the cells become visible quite differently. With
+DFS you will see the cells become visible all the way until it reaches the end
+of its chain and then you can see it travel back up and descend on the next
+available chain.
